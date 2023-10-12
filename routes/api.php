@@ -32,5 +32,12 @@ Route::get('create-user', function(Request $request){
         'data'=> $users,
     ]);
 });
+Route::get('fetch-user', function(Request $request){
+    $users = User::all();
+
+    return response()->json([
+        'data'=> $users,
+    ]);
+});
 
 
